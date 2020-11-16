@@ -1,11 +1,3 @@
-import glob
-import os
-import shutil
-
-basepath = "/workspaces/ckalluri/yocto/Xilinx_master"
-recipepath = os.path.join(basepath,"sources/meta-jupyter/recipes-python")
-buildpath = os.path.join(basepath,'builds-upgrade')
-
 
 shell_cmd='git status | cut -d ">" -f 2 | tail -n +6 | head -n -13  > upgrade_file_list.log'
 os.system(shell_cmd)

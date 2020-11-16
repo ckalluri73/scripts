@@ -9,6 +9,7 @@ import sys
 basepath = "/workspaces/ckalluri/yocto/jupyter_upgrade"
 recipepath = os.path.join(basepath,"sources/meta-jupyter/recipes-python")
 buildpath = os.path.join(basepath,'builds-upgrade')
+setupsdkpath=os.path.join(basepath,'setupsdk')
 
 #Parse the recipes in the layer
 os.chdir(recipepath)
@@ -56,4 +57,15 @@ for pkg in pypipackages.keys():
 	else:
 		print("No new version found for pkg: %s"%pkg)
 
+print("source build directory")
+os.chdir(basepath)
+os.system('source %s %s '%(setupsdkpath,buildpath))
+
+data='MACHINE="zcu102-zynqmp"'
+with open(os.path.join(buildpath,'conf/local.conf'),'a') as f:
+        f.write(data)
+
+for pkg in pypipackages.keys():
+	print("building pkg:%s %s\n"%(pkg,pypipackages[pkg]))
+	os.system('bitbake %s | tee %s_log.txt'%(pypipackages[pkg]['old_recipename'],pypipackages[pkg]['old_recipename']))
 
