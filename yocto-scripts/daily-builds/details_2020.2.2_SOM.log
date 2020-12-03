@@ -14,7 +14,7 @@
         "base_url": "https://gitenterprise.xilinx.com/Linux/device-tree-xlnx"
     }, 
     "fsbl": {
-        "branch": "master-rel-2020.2_som", 
+        "branch": "master-rel-2020.2.2_som", 
         "base_url": "https://gitenterprise.xilinx.com/embeddedsw/embeddedsw"
     }, 
     "kernel-module-hdmi": {
