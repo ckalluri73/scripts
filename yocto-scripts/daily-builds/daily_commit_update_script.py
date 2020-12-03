@@ -113,8 +113,9 @@ filename=projdir+'/build/conf/local.conf'
 with open(filename,'a') as f:
 	f.write(data + "\n")
 	f.write('IMAGE_INSTALL_remove=" tcf-agent"')
+	f.write('SSTATE_MIRRORS ?= "file://.* file:///proj/yocto/daily-sstatecache_2021/aarch64/PATH"')
 
 cmd="source {0} >& /dev/null; MACHINE=zcu102-zynqmp bitbake petalinux-image-minimal | tee zcu102.txt; MACHINE=zc702-zynq7 bitbake petalinux-image-minimal | tee zc702output.txt; MACHINE=vck190-versal bitbake petalinux-image-minimal | tee vck190.txt;".format(setupsdkpath)
-os.system(cmd)
+#os.system(cmd)
 print('\nAll Done!\n')
 
