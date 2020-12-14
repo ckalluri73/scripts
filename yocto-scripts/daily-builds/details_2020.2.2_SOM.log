@@ -1,7 +1,7 @@
 {
     "release-info": {
-        "projdir": "/scratch/ckalluri/DAILY/2020.2.2_SOM", 
-        "manifest": "rel-v2020.2.2_SOM",
+        "projdir": "/scratch/ckalluri/DAILY/2020", 
+        "manifest": "2020",
         "scripts_dir": "/scratch/ckalluri/scripts/yocto-scripts/",
         "oldcommitlog": "/proj/yocto/integration/2020.2.2_SOM/minimal_build/commitid_2020.2.2_SOM.log"
     },
