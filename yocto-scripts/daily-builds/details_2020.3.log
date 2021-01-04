@@ -5,12 +5,12 @@
         "scripts_dir": "/scratch/ckalluri/scripts/yocto-scripts/",
         "oldcommitlog": "/proj/yocto/minimal_build/commitid_2020.3.log"
     },
-    "atf": {
-        "branch": "xlnx_rebase_v2.2", 
+    "arm-trusted-firmware": {
+        "branch": "master-rel-2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/arm-trusted-firmware"
     }, 
-    "dtg": {
-        "branch": "master", 
+    "device-tree": {
+        "branch": "master-rel-2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/device-tree-xlnx"
     }, 
     "fsbl": {
@@ -22,7 +22,7 @@
         "base_url": "https://gitenterprise.xilinx.com/ipssw/hdmi-modules"
     }, 
     "kernel-module-vcu": {
-        "branch": "master", 
+        "branch": "master-rel-2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-modules"
     }, 
     "libmetal": {
@@ -30,35 +30,35 @@
         "base_url": "https://gitenterprise.xilinx.com/OpenAMP/libmetal"
     }, 
     "libomxil-xlnx": {
-        "branch": "master", 
+        "branch": "master-rel-2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-omx-il"
     }, 
     "libvcu-xlnx": {
-        "branch": "master", 
+        "branch": "master-rel-2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-ctrl-sw"
     }, 
-    "linuxxlnx": {
-        "branch": "master", 
+    "linux-xlnx": {
+        "branch": "xlnx_rebase_v5.4", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/linux-xlnx"
     }, 
     "open-amp": {
         "branch": "master-rel-2020.2", 
         "base_url": "https://gitenterprise.xilinx.com/OpenAMP/open-amp"
     }, 
-    "qemudt": {
+    "qemu-devicetrees": {
         "branch": "branch/xilinx-v2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/QEMU/dts"
     }, 
-    "qemu": {
+    "qemu-xilinx": {
         "branch": "branch/xilinx-v2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/QEMU/qemu"
     }, 
-    "ubootxlnx": {
-        "branch": "master", 
+    "uboot-xlnx": {
+        "branch": "xlnx_rebase_v2020.01", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/u-boot-xlnx"
     }, 
     "vcu-firmware": {
-        "branch": "master", 
+        "branch": "master-rel-2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-firmware"
     }, 
     "xen": {

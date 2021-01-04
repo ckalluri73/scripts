@@ -5,11 +5,11 @@
         "scripts_dir": "/scratch/ckalluri/scripts/yocto-scripts/",
         "oldcommitlog": "/proj/yocto/minimal_build/commitid_2021.1.log"
     },
-    "atf": {
+    "arm-trusted-firmware": {
         "branch": "master", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/arm-trusted-firmware"
     }, 
-    "dtg": {
+    "device-tree": {
         "branch": "2021.1_mnext", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/device-tree-xlnx"
     }, 
@@ -37,7 +37,7 @@
         "branch": "master", 
         "base_url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-ctrl-sw"
     }, 
-    "linuxxlnx": {
+    "linux-xlnx": {
         "branch": "master", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/linux-xlnx"
     }, 
@@ -45,15 +45,15 @@
         "branch": "master", 
         "base_url": "https://gitenterprise.xilinx.com/OpenAMP/open-amp"
     }, 
-    "qemudt": {
-        "branch": "branch/xilinx-v2020.3", 
+    "qemu-devicetrees": {
+        "branch": "master", 
         "base_url": "https://gitenterprise.xilinx.com/QEMU/dts"
     }, 
-    "qemu": {
-        "branch": "branch/xilinx-v2020.3", 
+    "qemu-xilinx": {
+        "branch": "master", 
         "base_url": "https://gitenterprise.xilinx.com/QEMU/qemu"
     }, 
-    "ubootxlnx": {
+    "uboot-xlnx": {
         "branch": "master", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/u-boot-xlnx"
     }, 
