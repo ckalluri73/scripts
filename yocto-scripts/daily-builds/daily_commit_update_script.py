@@ -68,7 +68,7 @@ for pkg in components:
 	pkg_scrapped_commits=findall(pattern,pkg_scrape)
 	components[pkg]['new_commit']=pkg_scrapped_commits[0]
 	if components[pkg]['old_commit'] not in pkg_scrapped_commits:
-		print("old commit for %s is not visible in provided branch. Check branch and commits"%pkg)
+		print("old commit for %s is not visible in provided branch. Check branch %s and old commits %s"%(pkg,components[pkg]['branch'],components[pkg]['old_commit']))
 	dictionary[pkg]=(components[pkg]['old_commit'],components[pkg]['new_commit'])
 
 #print(components)
@@ -79,35 +79,65 @@ print('\n \n')
 for key,value in list(dictionary.items()):
 	if value[0]==value[1]:
 		del dictionary[key]
+if 'fsbl' in dictionary.keys():
+	dictionary['embeddedsw']=dictionary['fsbl']
+	del dictionary['fsbl']
 
 #print(dictionary)
 #use flag to stop script before build if old commit id not found (to manually fix commit id before builds)
+#TBD:handle case when commit in recipe is different from commit in build and different from the HEAD in remote repo
 fix = ''
 for key, value in dictionary.items():
     flag = 0
+    print("\nFor key %s, value =%s \n "%(key,value))
     for root, dirs, filenames in os.walk(projdir+'/sources/meta-xilinx-internal'):
 	    for f in filenames:
-		    if os.path.splitext(f)[-1].lower() in  (".bbappend", ".bb", ".inc", ".bbclass"):
+                    #Based on Key get the file name
+		    recipename=os.path.splitext(f)[0]
+		    if '_' in recipename:
+		            recipename=recipename.split("_")[0]
+		    if recipename in key:
+			    #Get recipe name to update the commit and branch details
 			    fullpath = os.path.join(root, f)
-			    if value[0] in open(fullpath,'r').read():
-				    filename=f
-				    flag = 1
-				    f = open(fullpath,'r')
-				    filedata = f.read()
-				    f.close()
-				    newdata = filedata.replace(value[0], value[1])
-				    #check for branch info:
-				    pkg=filename.split("_")[0] if "_" in filename else filename.split(".")[0]
-				    pkg="fsbl" if "embeddedsw" in pkg else [key for key in components.keys() if key in pkg][0] 
-				    branch_pattern = compile(r"BRANCH = \"(.*)\"")
-				    branch_data=findall(branch_pattern,filedata)[0]
-				    if components[pkg]['branch'] != branch_data:
-				          newdata=newdata.replace(branch_data,components[pkg]['branch'])
-				    #write to file
-				    f = open(fullpath,'w')
-				    f.write(newdata)
-				    f.close()
-				    print(key," is new. Changed file:", f, "\nCommit id was:", value[0], "\nNew Id is:" ,value[1], '\n')
+			    filename=f
+			    flag = 1
+			    f = open(fullpath,'r')
+			    filedata = f.read()
+			    f.close()
+			    #Check if the file uses include file to update commits and if so skip this file
+			    filelines=filedata.split("\n")
+			    linecount=0
+			    newdata=""
+			    for i in filelines:
+			          if i:
+			              linecount+=1 
+			    if linecount == 1:
+			        continue
+			    #Get component name based on the recipe name
+			    pkg=filename.split("_")[0] if "_" in filename else filename.split(".")[0]
+			    pkg="fsbl" if "embeddedsw" in pkg else [key for key in components.keys() if key in pkg][0] 
+			    #Check for commit id info and update it:
+			    if value[0] not in filedata:
+			          srcrev_pattern = compile(r"SRCREV = \"(.*)\"")
+			          srcrev_data=findall(srcrev_pattern,filedata)[0]
+			          print(key,":CommitID %s used in builds is not same as commitID in recipe %s \n"%(value[0],srcrev_data))
+			          if srcrev_data == value[1]:
+			                 print(key,":Recipe is already pointing to latest commit\n")
+			          else:
+			                 print(key," Update commitId in file:", f, "\nold commit was:", srcrev_data, "\nNew commit is:" ,value[1], '\n')
+			                 newdata = filedata.replace(srcrev_data,value[1])
+			    else:
+			          newdata = filedata.replace(value[0], value[1])
+		            #check for branch info:
+			    branch_pattern = compile(r"BRANCH = \"(.*)\"")
+			    branch_data=findall(branch_pattern,filedata)[0]
+			    if components[pkg]['branch'] != branch_data:
+			          print(key," Update branch in file:", f, "\nold branch was:", branch_data, "\nNew Branch is:" ,components[pkg]['branch'], '\n')
+			          newdata=newdata.replace(branch_data,components[pkg]['branch'])
+		            #write to file
+			    if newdata:
+			          with open(fullpath,'w') as f:
+			                f.write(newdata)
     if flag==0:
 	    fix = fix + key + ', '
 

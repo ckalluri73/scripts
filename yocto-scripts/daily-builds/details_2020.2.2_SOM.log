@@ -3,7 +3,7 @@
         "projdir": "/scratch/ckalluri/DAILY/2020", 
         "manifest": "2020",
         "scripts_dir": "/scratch/ckalluri/scripts/yocto-scripts/",
-        "oldcommitlog": "/proj/yocto/minimal_build/committid_2020.2.2_SOM.log"
+        "oldcommitlog": "/proj/yocto/minimal_build/commitid_2020.2.2_SOM.log"
     },
     "arm-trusted-firmware": {
         "branch": "master-rel-2020.2.2-som", 

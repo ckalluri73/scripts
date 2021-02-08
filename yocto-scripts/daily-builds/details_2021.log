@@ -6,7 +6,7 @@
         "oldcommitlog": "/proj/yocto/minimal_build/commitid_2021.1.log"
     },
     "arm-trusted-firmware": {
-        "branch": "master", 
+        "branch": "xlnx_rebase_v2.4", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/arm-trusted-firmware"
     }, 
     "device-tree": {
@@ -38,7 +38,7 @@
         "base_url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-ctrl-sw"
     }, 
     "linux-xlnx": {
-        "branch": "master", 
+        "branch": "xlnx_rebase_v5.10", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/linux-xlnx"
     }, 
     "open-amp": {
