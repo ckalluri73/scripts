@@ -9,7 +9,7 @@ SOC_VARIANTS_ZYNQMP=("dr" "ev")
 #by default SOC_VARIANT for versal is prime 
 SOC_VARIANTS_VERSAL=("-ai-core")
 
-BUILDPATH="/workspaces1/ckalluri/yocto/${REPO}"
+BUILDPATH="/workspaces/ckalluri/yocto/${REPO}"
 SCRIPTSPATH="/scratch/ckalluri/scripts/yocto-scripts/"
 
 clean_buildpath()
@@ -89,12 +89,12 @@ add_xilinx_remotes()
 	done
 }
 
-clean_buildpath
-clone_fresh_repo
-add_xilinx_remotes
+#clean_buildpath
+#clone_fresh_repo
+#add_xilinx_remotes
 build_non_generic_machines
 build_generic_machines
-build_without_internal_layer
-build_with_internal_layer
-build_poky_distro
-run_downloads
+#build_without_internal_layer
+#build_with_internal_layer
+#build_poky_distro
+#run_downloads
