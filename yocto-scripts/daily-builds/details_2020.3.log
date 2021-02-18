@@ -6,7 +6,7 @@
         "oldcommitlog": "/proj/yocto/minimal_build/commitid_2020.3.log"
     },
     "arm-trusted-firmware": {
-        "branch": "master-rel-2020.3", 
+        "branch": "xlnx_rebase_v2.2", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/arm-trusted-firmware"
     }, 
     "device-tree": {
@@ -18,7 +18,7 @@
         "base_url": "https://gitenterprise.xilinx.com/embeddedsw/embeddedsw"
     }, 
     "kernel-module-hdmi": {
-        "branch": "master", 
+        "branch": "rel-v2020.2", 
         "base_url": "https://gitenterprise.xilinx.com/ipssw/hdmi-modules"
     }, 
     "kernel-module-vcu": {
@@ -26,7 +26,7 @@
         "base_url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-modules"
     }, 
     "libmetal": {
-        "branch": "master-rel-2020.2", 
+        "branch": "master-rel-2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/OpenAMP/libmetal"
     }, 
     "libomxil-xlnx": {
@@ -38,11 +38,11 @@
         "base_url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-ctrl-sw"
     }, 
     "linux-xlnx": {
-        "branch": "xlnx_rebase_v5.4", 
+        "branch": "xilinx-v2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/linux-xlnx"
     }, 
     "open-amp": {
-        "branch": "master-rel-2020.2", 
+        "branch": "master-rel-2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/OpenAMP/open-amp"
     }, 
     "qemu-devicetrees": {
@@ -54,7 +54,7 @@
         "base_url": "https://gitenterprise.xilinx.com/QEMU/qemu"
     }, 
     "uboot-xlnx": {
-        "branch": "xlnx_rebase_v2020.01", 
+        "branch": "xilinx-v2020.3", 
         "base_url": "https://gitenterprise.xilinx.com/Linux/u-boot-xlnx"
     }, 
     "vcu-firmware": {
