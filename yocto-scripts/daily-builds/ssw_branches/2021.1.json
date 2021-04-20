@@ -4,8 +4,8 @@
     "ssw_components": [
         {
             "component": "linux-xlnx", 
-            "release_branch": "xlnx_rebase_v5.10",
-            "integration_branch":"xlnx_rebase_v5.10",         
+            "release_branch": "master",
+            "integration_branch":"master-next-test",         
             "url": "https://gitenterprise.xilinx.com/Linux/linux-xlnx",
             "owner":"michals@xilinx.com"
         }, 
