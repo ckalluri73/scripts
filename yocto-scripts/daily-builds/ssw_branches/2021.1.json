@@ -1,0 +1,386 @@
+{
+    "yocto_int_manifest":"2021",
+    "commitlog":"/proj/yocto/2021.1/integration/minimal_build/commitid_2021.1.log",
+    "ssw_components": [
+        {
+            "component": "linux-xlnx", 
+            "release_branch": "xlnx_rebase_v5.10",
+            "integration_branch":"xlnx_rebase_v5.10",         
+            "url": "https://gitenterprise.xilinx.com/Linux/linux-xlnx",
+            "owner":"michals@xilinx.com"
+        }, 
+        {
+            "component": "u-boot-xlnx", 
+            "release_branch": "master",
+            "integration_branch":"master-next-test",          
+            "url": "https://gitenterprise.xilinx.com/Linux/u-boot-xlnx",
+            "owner":"michals@xilinx.com"
+        }, 
+        {
+            "component": "arm-trusted-firmware",
+            "release_branch": "xlnx_rebase_v2.4", 
+            "integration_branch":"xlnx_rebase_v2.4",           
+            "url": "https://gitenterprise.xilinx.com/Linux/arm-trusted-firmware",
+            "owner":"vabbarap@xilinx.com"
+        }, 
+        {
+            "component": "fsbl",
+            "release_branch": "xlnx_rel_v2021.1",
+            "integration_branch":"xlnx_rel_v2021.1-next",           
+            "url": "https://gitenterprise.xilinx.com/embeddedsw/embeddedsw",
+            "owner":"saddepal@xilinx.com"
+        }, 
+        {
+            "component": "device-tree", 
+            "release_branch": "2021.1_mnext", 
+            "integration_branch":"2021.1_mnext",  
+            "url": "https://gitenterprise.xilinx.com/Linux/device-tree-xlnx",
+            "owner":"vabbarap@xilinx.com"
+        }, 
+        {
+            "component": "qemu-devicetrees", 
+            "release_branch": "master",
+            "integration_branch":"test/master",           
+            "url": "https://gitenterprise.xilinx.com/QEMU/dts",
+            "owner":"edgari@xilinx.com"
+        }, 
+        {
+            "component": "qemu-xilinx",
+            "release_branch": "master",
+            "integration_branch":"test/master",  
+            "url": "https://gitenterprise.xilinx.com/QEMU/qemu",
+            "owner":"edgari@xilinx.com"
+        }, 
+        {
+            "component": "xen", 
+            "release_branch": "xilinx/release-2021.1",
+            "integration_branch":"xilinx/staging-2020.1",
+            "url": "https://gitenterprise.xilinx.com/Xen/xen",
+            "owner":"stefanos@xilinx.com"
+        }, 
+        {
+            "component": "libmali-xlnx",
+            "release_branch": "rel-v2021.1",  
+            "url": "https://github.com/Xilinx/mali-userspace-binaries",
+            "owner":"madhurki@xilinx.com"
+        }, 
+        {
+            "component": "libmetal",
+            "release_branch": "master-rel-2021.1",
+            "integration_branch":"master-rel-2021.1-next",
+            "url": "https://gitenterprise.xilinx.com/OpenAMP/libmetal",
+            "owner":"arunbala@xilinx.com"
+        }, 
+        {
+            "component": "open-amp", 
+            "release_branch": "master-rel-2021.1",
+            "integration_branch":"master-rel-2021.1-next",
+            "url": "https://gitenterprise.xilinx.com/OpenAMP/open-amp",
+            "owner":"arunbala@xilinx.com"
+        }, 
+        {
+            "component": "vcu-firmware", 
+            "release_branch": "master",
+            "integration_branch":"master-next",           
+            "url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-firmware",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "libvcu-xlnx", 
+            "release_branch": "master",
+            "integration_branch":"master-next",
+            "url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-ctrl-sw",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "kernel-module-vcu",
+            "release_branch": "master", 
+            "integration_branch":"master-next",
+            "url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-modules",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "libomxil-xlnx", 
+            "release_branch": "master",
+            "integration_branch":"master-next",
+            "url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-omx-il",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "kernel-module-hdmi", 
+            "release_branch": "master",
+            "url": "https://gitenterprise.xilinx.com/ipssw/hdmi-modules",
+            "owner":"vsagar@xilinx.com"
+        }, 
+        {
+            "component": "pmu-firmware", 
+            "release_branch": "xlnx_rel_v2021.1",
+            "integration_branch":"xlnx_rel_v2021.1-next",
+            "url": "https://gitenterprise.xilinx.com/embeddedsw/embeddedsw",
+            "owner":"saddepal@xilinx.com"
+        }, 
+        {
+            "component": "xrt",
+            "release_branch": "master",
+            "url": "https://github.com/Xilinx/XRT",
+            "owner":"chvamshi@xilinx.com"
+        }, 
+        {
+            "component": "system-controller-app",
+            "release_branch": "master",
+            "url": "https://gitenterprise.xilinx.com/Platform-Management/system-controller",
+            "owner":"saeed.nowshadi@xilinx.com"
+        }, 
+        {
+            "component": "libvcu-xlnx",
+            "release_branch": "master",
+            "integration_branch":"master-next",         
+            "url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-ctrl-sw",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "libomxil-xlnx", 
+            "release_branch": "master",
+            "integration_branch":"master-next",  
+            "url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-omx-il",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "vcu-firmware",
+            "release_branch": "master",
+            "integration_branch":"master-next",
+            "url": "https://gitenterprise.xilinx.com/xilinx-vcu/vcu-firmware",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "gstreamer1.0",
+            "release_branch": "xlnx-rebase-v1.16.3",
+            "integration_branch":"xlnx-1.16.1-next",  
+            "url": "https://gitenterprise.xilinx.com/GStreamer/gstreamer",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "gstreamer1.0-omx",
+            "release_branch": "xlnx-rebase-v1.16.3",
+            "integration_branch":"xlnx-1.16.1-next",  
+            "url": "https://gitenterprise.xilinx.com/GStreamer/gst-omx",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "gstreamer1.0-plugins-base", 
+            "release_branch": "xlnx-rebase-v1.16.3",
+            "integration_branch":"xlnx-1.16.1-next",
+            "url": "https://gitenterprise.xilinx.com/GStreamer/gst-plugins-base",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "gstreamer1.0-plugins-good", 
+            "release_branch": "xlnx-rebase-v1.16.3", 
+            "integration_branch":"xlnx-1.16.1-next",
+            "url": "https://gitenterprise.xilinx.com/GStreamer/gst-plugins-good",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "gstreamer1.0-plugins-bad", 
+            "release_branch": "xlnx-rebase-v1.16.3", 
+            "integration_branch":"xlnx-1.16.1-next",
+            "url": "https://gitenterprise.xilinx.com/GStreamer/gst-plugins-bad",
+            "owner":"varunkum@xilinx.com"
+        }, 
+        {
+            "component": "bootgen",
+            "release_branch": "master",
+            "url": "https://gitenterprise.xilinx.com/SDK/bootgen",
+            "owner":"rdarapun@xilinx.com"
+        }
+    ],
+
+    "yocto_components": [
+        {
+            "component": "meta-browser",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021",
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-browser",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-clang",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-clang",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-jupyter", 
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021",  
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-jupyter",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-linaro",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-linaro",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-mingw",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-mingw",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-openamp", 
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021",
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-openamp",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-openembedded", 
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021",
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-openembedded",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-petalinux",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-petalinux",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-qt5",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021",
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-qt5",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-security", 
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-security",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-som",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021",
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-som",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-virtualization",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-virtualization",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-vitis-ai",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-vitis-ai",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-xilinx", 
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-xilinx",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-xilinx-internal",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-xilinx-internal",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "meta-xilinx-tools",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021",
+            "url": "https://gitenterprise.xilinx.com/Yocto/meta-xilinx-tools",
+            "owner":"ckalluri@xilinx.com"
+        }, 
+        {
+            "component": "poky", 
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/poky",
+            "owner":"ckalluri@xilinx.com" 
+        }, 
+        {
+            "component": "yocto-manifests", 
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/yocto-manifests",
+            "owner":"ckalluri@xilinx.com" 
+        }, 
+        {
+            "component": "yocto-scripts",
+            "release_branch": "rel-v2021.1",
+            "integration_branch":"2021", 
+            "url": "https://gitenterprise.xilinx.com/Yocto/yocto-scripts",
+            "owner":"ckalluri@xilinx.com" 
+        }
+    ],
+
+    "plnx_components": [
+        {
+            "component": "refdesign-builder",
+            "release_branch": "master",
+            "integration_branch":"master-next", 
+            "url": "https://gitenterprise.xilinx.com/Petalinux/refdesign-builder",
+            "owner":"varalaxm@xilinx.com"
+        },
+        {
+            "component": "skeleton_dist",
+            "release_branch": "master",
+            "integration_branch":"master-next", 
+            "url": "https://gitenterprise.xilinx.com/Petalinux/skeleton_dist",
+            "owner":"varalaxm@xilinx.com"
+        },
+        {
+            "component": "gnu_tools",
+            "release_branch": "master",
+            "integration_branch":"master-next", 
+            "url": "https://gitenterprise.xilinx.com/Petalinux/gnu_tools",
+            "owner":"varalaxm@xilinx.com"
+        },
+        {
+            "component": "shc",
+            "release_branch": "master",
+            "integration_branch":"master-next",
+            "url": "https://gitenterprise.xilinx.com/Petalinux/shc",
+            "owner":"varalaxm@xilinx.com"
+        },
+        {
+            "component": "plnx_bsp_overlay",
+            "release_branch": "master",
+            "integration_branch":"master-next",
+            "url": "https://gitenterprise.xilinx.com/Petalinux/plnx_bsp_overlay",
+            "owner":"varalaxm@xilinx.com"
+        },
+        {
+            "component": "plgx_devtools",
+            "release_branch": "master",
+            "integration_branch":"master-next",
+            "url": "https://gitenterprise.xilinx.com/Petalinux/plgx_devtools",
+            "owner":"varalaxm@xilinx.com"
+        },
+        {
+            "component": "single-image",
+            "release_branch": "master",
+            "integration_branch":"master-next",
+            "url": "https://gitenterprise.xilinx.com/Petalinux/single-image",
+            "owner":"swagathg@xilinx.com"
+        }
+    ]
+
+}
